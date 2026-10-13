@@ -182,27 +182,14 @@ Docs accompany every code change: update affected README and JSDoc contracts tog
 `vendor/` packages are pinned source copies (manifest with upstream SHAs in [vendor/README.md](vendor/README.md)). Update via the sync procedure there; re-apply or retire the logged local modifications; rerun `pnpm run test && pnpm run build`.
 
 <!-- kanban-sync:begin (synced from sehangel/claude-skills -- edit there, not here) -->
+
 ## Work tracking (hard rule)
 
-GitHub Issues in this repository are the project memory and Kanban board.
-Follow the `issues-as-memory` skill (`.claude/skills/issues-as-memory/SKILL.md`,
-synced from `sehangel/claude-skills`) and this repository's Kanban profile
-(`.claude/kanban-profile.md`), which holds what is specific to this repo.
+GitHub Issues are this repo's memory and Kanban board: follow the
+`issues-as-memory` skill (`.claude/skills/issues-as-memory/SKILL.md`, synced
+from `sehangel/claude-skills`) and the repo's Kanban profile
+(`.claude/kanban-profile.md`). Every request becomes an issue; every open
+issue has one `status:*` and one `priority:P0`-`P3` label; PRs say
+`Closes #n` / `Refs #n`.
 
-- Every operator message is a task: capture it as an issue (or a comment on
-  the matching one) in the same turn.
-- Every open issue has exactly one `status:*` label (`backlog`, `todo`,
-  `in-progress`, `review`, `qa`, `done`; plus `blocked` with who unblocks it)
-  and exactly one `priority:P0`-`P3` label. Work is picked P0 first.
-- PRs reference every issue they handle: `Closes #n` for each issue they
-  deliver, `Refs #n` for epics and for work an operator or a later PR
-  finishes. Other repos' issues use the full `owner/repo#n` form.
-- Labels and progress comments stay current as you build, test and ship.
-  Never put dates in comments (GitHub timestamps them).
-- Read the open issues at the start of every session and after every context
-  summary.
-- Never end a turn while an unblocked open issue is untouched: work it,
-  delegate it, or record on the issue why it can't move.
-- Rules in this file, the profile or a repo SOP may be stricter than the
-  skill, never looser. Never put secrets or personal data in an issue.
 <!-- kanban-sync:end -->
